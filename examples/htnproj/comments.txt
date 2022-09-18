@@ -1,0 +1,8 @@
+Notes on Solidity 
+
+Types
+- address - reference to a wallet which contains various contains
+- mapping - dict
+
+File Structure:
+

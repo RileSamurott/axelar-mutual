@@ -14,17 +14,7 @@ const {
 const fs = require('fs-extra');
 
 const examples = [
-    'call-contract',
-    'call-contract-with-token',
-    'cross-chain-token',
-    'deposit-address',
-    'forecall',
-    'headers',
-    'nft-auctionhouse',
-    'nft-linker',
-    'nonced-execution',
-    'send-ack',
-    'send-token',
+    'dao'
 ];
 
 describe('examples', () => {
@@ -47,7 +37,7 @@ describe('examples', () => {
     });
 
     for (const exampleName of examples) {
-        const example = require(`../examples/${exampleName}/index.js`);
+        const example = require(`../src/deploy.js`);
         it(exampleName, async () => {
             const chains = fs.readJsonSync('./info/local.json');
 

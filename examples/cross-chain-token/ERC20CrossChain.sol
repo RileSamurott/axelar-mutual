@@ -13,9 +13,7 @@ import { StringToAddress, AddressToString } from '@axelar-network/axelar-gmp-sdk
 contract ERC20CrossChain is AxelarExecutable, ERC20, Upgradable, IERC20CrossChain {
     using StringToAddress for string;
     using AddressToString for address;
-    string public name;
-    uint256 public tokensused;
-    uint256 public shares;
+
     mapping(string => uint256) public investments;
 
     error AlreadyInitialized();
@@ -42,10 +40,6 @@ contract ERC20CrossChain is AxelarExecutable, ERC20, Upgradable, IERC20CrossChai
     // This is for testing.
     function giveMe(uint256 amount) external {
         _mint(msg.sender, amount);
-    }
-
-    function recieve() external payable {
-
     }
 
     function transferRemote(

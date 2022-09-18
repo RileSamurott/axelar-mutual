@@ -24,7 +24,7 @@ async function test(env, chains, args, wallet, example) {
 }
 
 module.exports = {
-    test,
+    test
 }
 
 if (require.main === module) {

@@ -14,6 +14,7 @@ contract NftLinker is ERC721, AxelarExecutable, Upgradable {
     using StringToAddress for string;
     using AddressToString for address;
 
+
     error AlreadyInitialized();
 
     mapping(uint256 => bytes) public original; //abi.encode(originaChain, operator, tokenId);

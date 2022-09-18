@@ -24,7 +24,7 @@ async function deploy(chain, wallet) {
     console.log(`Deployed ERC721Demo for ${chain.name} at ${chain.erc721}.`);
     console.log(`Deploying NftLinker for ${chain.name}.`);
     const provider = getDefaultProvider(chain.rpc);
-    const contract = await deployUpgradable(
+    const contract = await deployUpgradable( // Helps to provide deterministic address
         chain.constAddressDeployer,
         wallet.connect(provider),
         NftLinker,
