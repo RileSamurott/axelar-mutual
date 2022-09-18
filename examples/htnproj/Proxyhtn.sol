@@ -6,9 +6,8 @@ pragma solidity 0.8.9;
 import { AxelarExecutable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/executables/AxelarExecutable.sol';
 import { IAxelarGateway } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGateway.sol';
 import { IAxelarGasService } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGasService.sol';
-import { IDao } from './IDao.sol';
 
-contract Proxy is AxelarExecutable{
+contract Proxy is AxelarExecutable {
     
     error IsLocked();
     error NotContract();
@@ -22,18 +21,15 @@ contract Proxy is AxelarExecutable{
     IAxelarGasService internal _gasService;
     address internal _dao;
     
-    constructor(address gateway) AxelarExecutable(gateway) {
-
+    constructor(address gateway, address gasServiceo) AxelarExecutable(gateway) {
+        _gateway = IAxelarGateway(gateway);
+        _gasService = IAxelarGasService(_gasService);
     }
 
     
     function initialize(
-        address gateway,
-        address gasService,
         address dao
     ) public {
-        _gateway = IAxelarGateway(gateway);
-        _gasService = IAxelarGasService(gasService);
         _dao = dao;
     }
     // end of dk if this works

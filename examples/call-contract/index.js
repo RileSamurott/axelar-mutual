@@ -26,7 +26,7 @@ async function test(chains, wallet, options) {
     for (const chain of chains) {
         const provider = getDefaultProvider(chain.rpc);
         chain.wallet = wallet.connect(provider);
-        chain.contract = new Contract(chain.executableSample, ExecutableSample.abi, chain.wallet);
+        chain.contract = await deployContract(chain.wallet, ExecutableSample, [chain.gateway, chain.gasReceiver]);
     }
 
     const source = chains.find((chain) => chain.name === (args[0] || 'Avalanche'));

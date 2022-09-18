@@ -72,6 +72,7 @@ async function test(chains, wallet, options) {
     await (await source.contract.giveMe(amount)).wait();
     console.log('--- After getting some token on the source chain ---');
     await print();
+    console.log(destination.name);
 
     await (
         await source.contract.transferRemote(destination.name, wallet.address, amount, { value: BigInt(Math.floor(gasLimit * gasPrice)) })
