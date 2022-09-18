@@ -42,3 +42,8 @@ We have a few things in mind to bring Just DAO It! to the next level:
 - Support even more chains
 - Use 0xsquid to convert tokens due to its direct compatibility with Axelar
 
+## Development Instructions
+You can build the project by running `npx hardhat compile`, and run the deployment script on a local net by running `node scripts/test examples/htnproj local` in the root directory.
+
+The local net can be started by running `node scripts/createLocal` in the root directory.
+
