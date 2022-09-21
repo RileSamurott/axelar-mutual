@@ -5,6 +5,8 @@
 
 Backend solidity contract code for Just DAO it, our team's submission for Hack the North 2022.
 
+[Update] We won the "Hype Labs Big dApp Energy" and "Best Axelar App" prizes
+
 ## 💡 Inspiration
 Just DAO It! was heavily inspired by the Collective Intelligence Theory, which proposes that one person can easily make an unwise decision, but it is much more unlikely for a whole group of people to make that same unwise decision. We wanted to apply this theory to blockchain technology whilst avoiding the expensive managing fees of mutual funds. This is when we stumbled upon Axelar and the Decentralized Autonomous Organization (DAO) model which was perfect for applying the Collective Intelligence Theory across different chains. Using Axelar, our decentralized mutual fund can have token assets from varying chains, whether it’s MATIC on the Polygon network, or AVAX on Avalanche.
 Hence… Enter a decentralized, democratic, mutual fund!
